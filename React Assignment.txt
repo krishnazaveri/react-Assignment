@@ -1,0 +1,140 @@
+React Assignment
+
+
+1.What is React Js?
+A)React is a JavaScript library for building user interfaces. React is used to build single-page applications.
+
+
+2.What is NPM in React Js?
+A)NPM is short for node package manager, an online directory that contains the various already registered open-source packages. 
+  NPM modules consume the various functions as a third-party package when installed into an app using the NPM command npm install .
+
+3.What is Role of Node Js in react Js?
+A)It is used for server-side programming, and primarily deployed for non-blocking, event-driven servers, such as traditional web sites and 
+  back-end API services, but was originally designed with real-time, push-based architectures in mind. 
+  Every browser has its own version of a JS engine, and node.
+
+4.What is CLI command In React Js?
+A)React Native CLI, short for Command Line Interface, provides developers with the essential tools to set up and manage a React Native project.
+
+5.What is Components in React Js?
+A)Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. 
+  Components come in two types, Class components and Function components.
+
+6.What is Header and Content Components in React Js?
+A)A header component defines a reusable custom header that can be sent in an API request or returned in an API response.
+
+7.How to install React Js on Windows, Linux Operating System? How to Install
+NPM and How to check version of NPM?
+
+A)Installation Reactjs on Windows:
+	Step 1: Install Node.js installer for windows. Click on this link. Here install the LTS version (the one present on the left). 
+		Once downloaded open NodeJS without disturbing other settings, click on the Next button until it’s completely installed.
+	Step 2: Open command prompt  to check whether it is completely installed or not type the command –> node -v
+	Step 3: Now in the terminal run the below command: 
+		npm install -g create-react-app
+	Step 4:Now Create a new folder where you want to make your react app using the below command:
+		mkdir newfolder
+	Step 5: Now inside this folder run the command –>
+		create-react-app reactfirst YOUR_APP_NAME
+	Step 6: Now open the IDE of your choice for eg.  Visual studio code and open the folder where you have installed the react app newfolder 
+		(in the above example)  inside the folder you will see your app’s name reactapp (In our example). 
+		Use the terminal and move inside your app name folder.Use command  cd reactapp (your app name)
+	Step 7: To start your app run the below command :
+		npm start 
+
+
+Using the Comand-Line Interface (CLI) to inspect NPM Version
+Open your command-line interface (such as Terminal Command Prompt).
+Writer the given command and press Enter: npm –version.
+The command will display the version number of NPM installed on your system. For example, if the output is 7.22.
+
+
+8.How to check version of React Js?
+A)To check which React version is your project using you need to open the package. json. 
+  Take a look under the dependencies section. It should list all of the dependencies of your project and one of those should be React.
+
+9.How to change in components of React Js?
+A)To change a value in the state object, use the this. setState() method. 
+  When a value in the state object changes, the component will re-render, meaning that the output will change according to the new value(s).
+
+10.How to Create a List View in React Js?
+
+A)function App() {
+  
+const items=[];
+  for(let i=0 ; i<10;i++){
+    items.push(<li key={i}> Hello</li>)
+  }
+  return (
+      <>
+      <ul>{items}</ul>       
+      </> 
+    
+  );
+}
+
+export default App;
+
+11.Create Increment decrement state change by button click?
+A)
+
+
+import React from "react"
+
+class StateArray extends React.Component
+
+
+{
+
+    constructor()
+            {
+                super();
+                this.state = { count : 0}
+            }
+
+            change = ()=>{
+                this.setState((prev)=>( {count:prev.count+ 1} ))
+        
+            }
+
+            decrement = ()=>{
+                this.setState((prev)=>( {count:prev.count- 1} ))
+        
+            }
+
+            reset = ()=>{
+                
+                this.setState(()=>( {count:0} ))
+        
+            }
+    render()
+    {
+        return(
+            <>
+
+           <h1> {this.state.count} </h1> 
+
+            <button onClick={this.change}>Increment</button>
+            <button onClick={this.decrement}>Decrement</button>
+            <button onClick={this.reset}>Reset</button>
+            
+            </>
+        )
+    }
+}
+
+export default StateArray
+
+
+
+
+
+
+
+
+
+
+
+
+
